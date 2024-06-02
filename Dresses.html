@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Fashion Boutique</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Styling untuk halaman shop */
+    body {
+      background-color: #f8d7da;
+      color: palevioletred;
+    }
+    .shop-container {
+      padding: 20px;
+    }
+    .shop-item {
+      margin-bottom: 20px;
+    }
+    .shop-item img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .shop-item-caption {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .navbar {
+      background-color: white !important;
+      border-color: #f8d7da !important;
+    }
+    .navbar-dark .navbar-brand {
+      color: #721c24 !important;
+    }
+    .navbar-dark .navbar-nav .nav-link {
+      color: #721c24 !important;
+    }
+    .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+      color: white !important;
+      background-color: #721c24 !important;
+    }
+    .navbar-dark .navbar-toggler {
+      color: rgba(0, 0, 0, 0.5);
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+    .navbar-dark .navbar-toggler-icon {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-md navbar-dark" style="background-color: #f8d7da;">
+  <div class="container">
+    <a class="navbar-brand" href="#"><span>Fashion Boutique</span></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="myNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="redirectToSurvey()">Survey</a></li>
+        <li class="nav-item"><a class="nav-link" href="Dresses.html">Dresses</a></li>
+        <li class="nav-item"><a class="nav-link" href="Accessories.html">Accessories</a></li>
+      </ul>          
+    </div>
+  </div>
+</nav>
+
+<div class="container shop-container">
+  <h2 class="text-center mb-4">Our Collections</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="shop-item">
+        <img src="https://i.pinimg.com/originals/8b/92/03/8b9203cb74744b4df1d541dc5868c4ca.jpg" alt="">
+        <div class="shop-item-caption">
+          <h4>Mystical Midnight</h4>
+          <p>A trendy dress with floral patterns. Perfect for casual outings or evening events.</p>
+          <p><strong>Harga: Rp 200.000</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="shop-item">
+        <img src="http://lifeinmydress.com/wp-content/uploads/2017/12/shein_high_slit_velvet_convertible_burgundy_dress.jpg" alt="">
+        <div class="shop-item-caption">
+          <h4>Aurora Borealis</h4>
+          <p>A stylish burgundy dress with a high slit design. Great for parties or special occasions.</p>
+          <p><strong>Harga: Rp 250.000</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="shop-item">
+        <img src="https://www.critiquemystyle.com/wp-content/uploads/2019/10/gitiIMGL7597-01.jpg" alt="">
+        <div class="shop-item-caption">
+          <h4>Secret Garden</h4>
+          <p>A chic and elegant dress with a flattering fit. Ideal for formal events or dinners.</p>
+          <p><strong>Harga: Rp 300.000</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="shop-item">
+        <img src="https://i.pinimg.com/originals/67/b7/c4/67b7c40fe9c2d38d0683b754177928a7.jpg" alt="">
+        <div class="shop-item-caption">
+          <h4>Ocean Serenade</h4>
+          <p>A classic black dress with a modern twist. Suitable for various occasions.</p>
+          <p><strong>Harga: Rp 350.000</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="shop-item">
+        <img src="https://bunnstore.com.vn/wp-content/uploads/2021/12/nama_dress.jpg" alt="">
+        <div class="shop-item-caption">
+          <h4>Enchanted Forest</h4>
+          <p>An ivory cocktail dress with exquisite crystal detailing. Perfect for formal events.</p>
+          <p><strong>Harga: Rp 400.000</strong></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="shop-item">
+        <img src="https://i.pinimg.com/originals/33/c8/8e/33c88e67c4b8bec00b33911194816ba9.jpg" alt="">
+        <div class="shop-item-caption">
+          <h4>Monet’s Canvas</h4>
+          <p>A stunning red dress with a flowy silhouette. Ideal for parties and special occasions.</p>
+          <p><strong>Harga: Rp 450.000</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Script untuk redirect ke halaman survey -->
+<script>
+  function redirectToSurvey() {
+    window.location.href = "survey.html";
+  }
+</script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

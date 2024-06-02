@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Boutique - Survey</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8d7da; /* Warna pink soft untuk background */
+            color: #333; /* Warna teks */
+        }
+        
+        .navbar {
+            background-color: #f5c6cb; /* Warna pink soft untuk navbar */
+        }
+
+        .navbar-brand, .nav-link {
+            color: #721c24 !important; /* Warna teks pada navbar */
+        }
+
+        .survey-form {
+            background-color: #ffffff; /* Warna putih untuk formulir survei */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px; /* Memberikan jarak atas untuk formulir */
+        }
+
+        .btn-primary {
+            background-color: #d9534f;
+            border-color: #d43f3a;
+        }
+
+        .btn-primary:hover {
+            background-color: #c9302c;
+            border-color: #ac2925;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Fashion Boutique</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Survey.html">Survey</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Dresses.html">Dresses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Accessories.html">Accessories</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Formulir Survey -->
+<div class="container">
+    <div class="survey-form">
+        <h3>Take Our Survey</h3>
+        <form id="surveyForm">
+            <!-- Formulir Survey -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender">
+                    <option value="">Select</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+<!-- Script Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Script untuk menampilkan alert -->
+<script>
+    document.getElementById("surveyForm").addEventListener("submit", function(event){
+        event.preventDefault(); // Mencegah form untuk mengirimkan permintaan
+
+        // Mengambil nilai dari setiap elemen formulir
+        var name = document.getElementById("name").value;
+        var gender = document.getElementById("gender").value;
+        var email = document.getElementById("email").value;
+        var date = document.getElementById("date").value;
+
+        // Memeriksa apakah semua bidang telah diisi
+        if(name === "" || gender === "" || email === "" || date === "") {
+            alert("Please fill in all fields."); // Peringatan jika ada bidang yang kosong
+        } else {
+            // Menampilkan alert dengan nilai formulir
+            alert("Thank you! Your survey has been submitted successfully.\n\nName: " + name + "\nGender: " + gender + "\nEmail: " + email + "\nDate: " + date);
+        }
+    });
+</script>
+
+</body>
+</html>
